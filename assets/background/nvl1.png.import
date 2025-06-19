@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwp6e4jim5qji"
-path="res://.godot/imported/vegetable-valley.png-e6b28b6a6c535fbe7b530a1b98d09c16.ctex"
+uid="uid://dmv3df62jpcmf"
+path="res://.godot/imported/nvl1.png-c4a1c3df5ed15a06ec6f94d5a868c948.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/map/vegetable-valley.png"
-dest_files=["res://.godot/imported/vegetable-valley.png-e6b28b6a6c535fbe7b530a1b98d09c16.ctex"]
+source_file="res://assets/background/nvl1.png"
+dest_files=["res://.godot/imported/nvl1.png-c4a1c3df5ed15a06ec6f94d5a868c948.ctex"]
 
 [params]
 
