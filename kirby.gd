@@ -10,10 +10,10 @@ func _ready():
 	add_to_group("jugador")
 
 func _physics_process(delta):
-	camera.position.y = 0
+	#camera.position.y = 0
 	var direccion = Input.get_axis("ui_left","ui_right")
 	velocity.x = direccion * velocidad
-	camera.position.x = position.x
+	#camera.position.x = position.x
 	
 	if not is_on_floor():
 		velocity.y += gravedad * delta

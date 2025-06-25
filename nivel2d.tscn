@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://don8ve037x72a"]
 
 [ext_resource type="Texture2D" uid="uid://dken4f8066rpr" path="res://assets/map/Game Boy Advance - Kirby Nightmare in Dream Land - Vegetable Valley Level 1.png" id="2_gmoul"]
-[ext_resource type="Texture2D" uid="uid://c0e6xi88gc4ce" path="res://assets/character/basic.png" id="3_6kcor"]
+[ext_resource type="Texture2D" uid="uid://6sc03nf7428l" path="res://assets/character/kirby-sprites.png" id="3_6kcor"]
 [ext_resource type="Script" uid="uid://lydmjckv7vdx" path="res://character_body_2d.gd" id="3_gmoul"]
 [ext_resource type="PackedScene" uid="uid://6uftnbb43p75" path="res://plataforma.tscn" id="4_xnsf1"]
 

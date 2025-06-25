@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://b4ht303ethcp7"]
+[gd_scene load_steps=8 format=4 uid="uid://b4ht303ethcp7"]
 
-[ext_resource type="Texture2D" uid="uid://xewlpvodskcp" path="res://assets/image (1).png" id="1_biyra"]
-[ext_resource type="Texture2D" uid="uid://c0e6xi88gc4ce" path="res://assets/character/basic.png" id="2_wdrtl"]
-[ext_resource type="Script" uid="uid://lydmjckv7vdx" path="res://character_body_2d.gd" id="4_ka52b"]
+[ext_resource type="Texture2D" path="res://assets/image (1).png" id="1_biyra"]
+[ext_resource type="PackedScene" uid="uid://dgqu1kr71148u" path="res://kirby.tscn" id="3_wt7nk"]
 [ext_resource type="PackedScene" uid="uid://6uftnbb43p75" path="res://plataforma.tscn" id="4_wq3hc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wt7nk"]
@@ -439,15 +438,7 @@ sources/4 = SubResource("TileSetAtlasSource_wq3hc")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wq3hc"]
 size = Vector2(849, 20)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wq3hc"]
-radius = 12.0416
-
 [node name="Node2D" type="Node2D"]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(236, 51)
-tile_map_data = PackedByteArray("AADY//z/AQAAAAIAAADY//3/AQAAAAMAAADY//7/AQAAAAQAAADY////AQAAAAUAAADZ//v/AQABAAEAAADZ//z/AQABAAIAAADZ//3/AQABAAMAAADZ//7/AQABAAQAAADZ////AQABAAUAAADa//z/AQACAAIAAADa//3/AQACAAMAAADa//7/AQACAAQAAADa////AQACAAUAAADb//z/AQADAAIAAADb//3/AQADAAMAAADb//7/AQADAAQAAADb////AQADAAUAAADc//3/AQAEAAMAAADc//7/AQAEAAQAAADc////AQAEAAUAAADd//3/AQAFAAMAAADd//7/AQAFAAQAAADd////AQAFAAUAAADe//3/AQAGAAMAAADe//7/AQAGAAQAAADe////AQAGAAUAAADf//3/AQAHAAMAAADf//7/AQAHAAQAAADf////AQAHAAUAAADg//3/AQAIAAMAAADg//7/AQAIAAQAAADg////AQAIAAUAAADh//3/AQAJAAMAAADh//7/AQAJAAQAAADh////AQAJAAUAAADi//3/AQAKAAMAAADi//7/AQAKAAQAAADi////AQAKAAUAAADj//z/AQALAAIAAADj//3/AQALAAMAAADj//7/AQALAAQAAADj////AQALAAUAAADk//z/AQAMAAIAAADk//3/AQAMAAMAAADk//7/AQAMAAQAAADk////AQAMAAUAAADl//z/AQANAAIAAADl//3/AQANAAMAAADl//7/AQANAAQAAADl////AQANAAUAAADm//z/AQAOAAIAAADm//3/AQAOAAMAAADm//7/AQAOAAQAAADm////AQAOAAUAAADn//3/AQAPAAMAAADn//7/AQAPAAQAAADn////AQAPAAUAAADo//z/AQAQAAIAAADo//3/AQAQAAMAAADo//7/AQAQAAQAAADo////AQAQAAUAAADp//z/AQARAAIAAADp//3/AQARAAMAAADp//7/AQARAAQAAADp////AQARAAUAAADq//v/AQASAAEAAADq//z/AQASAAIAAADq//3/AQASAAMAAADq//7/AQASAAQAAADq////AQASAAUAAADr//z/AQATAAIAAADr//3/AQATAAMAAADr//7/AQATAAQAAADr////AQATAAUAAADs//3/AQAUAAMAAADs//7/AQAUAAQAAADs////AQAUAAUAAADt//3/AQAVAAMAAADt//7/AQAVAAQAAADt////AQAVAAUAAADu//z/AQAWAAIAAADu//3/AQAWAAMAAADu//7/AQAWAAQAAADu////AQAWAAUAAADv//z/AQAXAAIAAADv//3/AQAXAAMAAADv//7/AQAXAAQAAADv////AQAXAAUAAADw//z/AQAYAAIAAADw//3/AQAYAAMAAADw//7/AQAYAAQAAADw////AQAYAAUAAADx//z/AQAZAAIAAADx//3/AQAZAAMAAADx//7/AQAZAAQAAADx////AQAZAAUAAADy//3/AQAaAAMAAADy//7/AQAaAAQAAADy////AQAaAAUAAADz//3/AQAbAAMAAADz//7/AQAbAAQAAADz////AQAbAAUAAAD0//z/AQAcAAIAAAD0//3/AQAcAAMAAAD0//7/AQAcAAQAAAD0////AQAcAAUAAAD1//z/AQAdAAIAAAD1//3/AQAdAAMAAAD1//7/AQAdAAQAAAD1////AQAdAAUAAAD2//z/AQAeAAIAAAD2//3/AQAeAAMAAAD2//7/AQAeAAQAAAD2////AQAeAAUAAAD3//z/AQAfAAIAAAD3//3/AQAfAAMAAAD3//7/AQAfAAQAAAD3////AQAfAAUAAAD4//r/AQAgAAAAAAD4//v/AQAgAAEAAAD4//z/AQAgAAIAAAD4//3/AQAgAAMAAAD4//7/AQAgAAQAAAD5//r/AQAhAAAAAAD5//v/AQAhAAEAAAD5//z/AQAhAAIAAAD5//3/AQAhAAMAAAD5//7/AQAhAAQAAAD6//r/AQAiAAAAAAD6//v/AQAiAAEAAAD6//z/AQAiAAIAAAD6//3/AQAiAAMAAAD6//7/AQAiAAQAAAD6////AQAiAAUAAAD7//v/AQAjAAEAAAD7//z/AQAjAAIAAAD7//3/AQAjAAMAAAD7//7/AQAjAAQAAAD7////AQAjAAUAAAD8//z/AQAkAAIAAAD8//3/AQAkAAMAAAD8//7/AQAkAAQAAAD8////AQAkAAUAAAD9//z/AQAlAAIAAAD9//3/AQAlAAMAAAD9//7/AQAlAAQAAAD9////AQAlAAUAAAD+//z/AQAmAAIAAAD+//3/AQAmAAMAAAD+//7/AQAmAAQAAAD+////AQAmAAUAAAD///z/AQAnAAIAAAD///3/AQAnAAMAAAD///7/AQAnAAQAAAD/////AQAnAAUAAAAAAPz/AQAoAAIAAAAAAP3/AQAoAAMAAAAAAP7/AQAoAAQAAAAAAP//AQAoAAUAAAABAPz/AQApAAIAAAABAP3/AQApAAMAAAABAP7/AQApAAQAAAABAP//AQApAAUAAAD5////AQAeAAUAAAD4////AQAeAAUAAAA=")
-tile_set = SubResource("TileSet_wt7nk")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(236, 51)
@@ -457,26 +448,8 @@ tile_set = SubResource("TileSet_wt7nk")
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer2/StaticBody2D"]
-position = Vector2(187, -67)
+position = Vector2(184, -71)
 shape = SubResource("RectangleShape2D_wq3hc")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-290, -348)
-script = ExtResource("4_ka52b")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(292, 193)
-anchor_mode = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(415, 301)
-scale = Vector2(0.318167, 0.262)
-texture = ExtResource("2_wdrtl")
-vframes = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(409, 306)
-shape = SubResource("CircleShape2D_wq3hc")
 
 [node name="plataforma" parent="." instance=ExtResource("4_wq3hc")]
 position = Vector2(376, -86)
@@ -489,3 +462,6 @@ position = Vector2(641, -76)
 
 [node name="plataforma4" parent="." instance=ExtResource("4_wq3hc")]
 position = Vector2(767, -145)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_wt7nk")]
+position = Vector2(7, -34)
