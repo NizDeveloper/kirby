@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://xiety0an6mkd" path="res://kirby.gd" id="1_yym33"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yym33"]
-radius = 4.0
+radius = 25.0
 
 [sub_resource type="Animation" id="Animation_qqxg4"]
 length = 0.001
@@ -24,15 +24,13 @@ _data = {
 script = ExtResource("1_yym33")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-7.62939e-06, -3.05176e-05)
-scale = Vector2(0.156607, 0.188477)
 texture = ExtResource("1_q8jv8")
 hframes = 5
 vframes = 5
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(1, 19)
 shape = SubResource("CircleShape2D_yym33")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -617,7 +617,7 @@ sources/2 = SubResource("TileSetAtlasSource_wt7nk")
 sources/4 = SubResource("TileSetAtlasSource_wq3hc")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wq3hc"]
-size = Vector2(839.5, 20)
+size = Vector2(984.5, 20)
 
 [node name="Node2D" type="Node2D"]
 
@@ -634,7 +634,7 @@ tile_set = SubResource("TileSet_wt7nk")
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer2/StaticBody2D"]
-position = Vector2(188.75, -70)
+position = Vector2(116.25, -70)
 shape = SubResource("RectangleShape2D_wq3hc")
 
 [node name="plataforma" parent="." instance=ExtResource("4_ddele")]
@@ -650,4 +650,5 @@ position = Vector2(641, -76)
 position = Vector2(767, -145)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_efbda")]
-position = Vector2(12, -36)
+position = Vector2(16, -44)
+scale = Vector2(0.3, 0.3)
