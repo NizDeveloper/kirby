@@ -465,3 +465,4 @@ position = Vector2(767, -145)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_wt7nk")]
 position = Vector2(7, -34)
+
