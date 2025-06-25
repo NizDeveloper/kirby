@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="kirby"
-run/main_scene="uid://b4ht303ethcp7"
+run/main_scene="uid://don8ve037x72a"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

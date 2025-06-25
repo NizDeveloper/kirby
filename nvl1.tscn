@@ -457,7 +457,7 @@ tile_set = SubResource("TileSet_wt7nk")
 [node name="StaticBody2D" type="StaticBody2D" parent="TileMapLayer2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer2/StaticBody2D"]
-position = Vector2(183.5, -70)
+position = Vector2(187, -67)
 shape = SubResource("RectangleShape2D_wq3hc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
@@ -465,9 +465,8 @@ position = Vector2(-290, -348)
 script = ExtResource("4_ka52b")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(289, 218)
+position = Vector2(292, 193)
 anchor_mode = 0
-zoom = Vector2(6, 6)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(415, 301)
@@ -484,12 +483,9 @@ position = Vector2(376, -86)
 
 [node name="plataforma2" parent="." instance=ExtResource("4_wq3hc")]
 position = Vector2(520, -113)
-tipo = 3
 
 [node name="plataforma3" parent="." instance=ExtResource("4_wq3hc")]
 position = Vector2(641, -76)
-tipo = 1
 
 [node name="plataforma4" parent="." instance=ExtResource("4_wq3hc")]
 position = Vector2(767, -145)
-tipo = 2
