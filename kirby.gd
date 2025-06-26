@@ -57,14 +57,14 @@ func _physics_process(delta):
 
 func conectar_monedas():
 	if coin.overlaps_body(self):
-		coin.position.y = 1000
+		coin.position.y = -1000
 		puntuacion += 1
 		puntuacion_label.text = str(puntuacion)
 	if coin2.overlaps_body(self):
-		coin2.position.y = 1000
+		coin2.position.y = -1000
 		puntuacion += 1
 		puntuacion_label.text = str(puntuacion)
 	if coin3.overlaps_body(self):
-		coin3.position.y = 1000
+		coin3.position.y = -1000
 		puntuacion += 1
 		puntuacion_label.text = str(puntuacion)
