@@ -35,8 +35,7 @@ func _on_body_entered(body: Node2D) -> void:
 					body.puede_rebotar(fuerza_rebote)
 				else:
 					body.velocity.y = body.brinco * fuerza_rebote
-			pass
-	
+
 func oscilar():
 		var tween = create_tween()
 		tween.tween_property(self,"position:x",position.x + 100,2)
