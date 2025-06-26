@@ -2306,19 +2306,27 @@ shape = SubResource("RectangleShape2D_xnsf1")
 position = Vector2(44, -13)
 scale = Vector2(0.3, 0.3)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2Dr"]
-position = Vector2(577, 84)
+[node name="Label" type="Label" parent="CharacterBody2D"]
+offset_left = -543.333
+offset_top = -393.333
+offset_right = -503.333
+offset_bottom = -309.333
+theme_override_font_sizes/font_size = 61
+text = "x"
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2Dr"]
-position = Vector2(29, -30)
-scale = Vector2(0.333333, 0.302083)
-texture = ExtResource("3_6kcor")
-hframes = 5
-vframes = 4
+[node name="puntuacion" type="Label" parent="CharacterBody2D"]
+offset_left = -496.667
+offset_top = -390.0
+offset_right = -456.667
+offset_bottom = -306.0
+theme_override_font_sizes/font_size = 61
+text = "0"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2Dr"]
-position = Vector2(23, -22)
-shape = SubResource("CapsuleShape2D_k277h")
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-585.667, -345.667)
+scale = Vector2(1.36806, 1.36806)
+texture = ExtResource("3_gmoul")
+vframes = 6
 
 [node name="plataforma" parent="." instance=ExtResource("4_xnsf1")]
 position = Vector2(281, 23)
