@@ -2310,13 +2310,14 @@ position = Vector2(2, 19)
 script = ExtResource("3_gmoul")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2Dr"]
-position = Vector2(575, 15)
+position = Vector2(577, 84)
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2Dr"]
 position = Vector2(29, -30)
 scale = Vector2(0.333333, 0.302083)
 texture = ExtResource("3_6kcor")
-vframes = 2
+hframes = 5
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2Dr"]
 position = Vector2(23, -22)
