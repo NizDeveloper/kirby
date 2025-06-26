@@ -16,7 +16,7 @@ var run = false
 
 func _ready():
 	add_to_group("jugador")
-	conectar_monedas()
+	moneda()
 
 func _physics_process(delta):
 	var direccion = Input.get_axis("ui_left","ui_right")
@@ -52,10 +52,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = brinco
 
-	conectar_monedas()
+	moneda()
 	move_and_slide()
 
-func conectar_monedas():
+func moneda():
 	if coin.overlaps_body(self):
 		coin.position.y = -1000
 		puntuacion += 1
