@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dq3xnq813byf1"]
+[gd_scene load_steps=20 format=4 uid="uid://dq3xnq813byf1"]
 
 [ext_resource type="Texture2D" uid="uid://dmv3df62jpcmf" path="res://assets/background/nvl1.png" id="1_al5jf"]
 [ext_resource type="Texture2D" uid="uid://nwxvblktha50" path="res://assets/map/nvl1.png" id="1_te2y3"]
@@ -643,6 +643,12 @@ size = Vector2(40, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hpd8"]
 size = Vector2(24, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiv3b"]
+size = Vector2(1222, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nr527"]
+size = Vector2(46, 30.5)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -737,3 +743,18 @@ scale = Vector2(0.4, 0.4)
 [node name="coin3" parent="." instance=ExtResource("5_al5jf")]
 position = Vector2(488, -15)
 scale = Vector2(0.4, 0.4)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(619, 100)
+shape = SubResource("RectangleShape2D_aiv3b")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1218, -56)
+shape = SubResource("RectangleShape2D_nr527")
+
+[connection signal="body_entered" from="Area2D" to="plataforma2" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="plataforma2" method="_on_area_2d_2_body_entered"]

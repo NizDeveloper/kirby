@@ -2370,3 +2370,5 @@ scale = Vector2(0.4, 0.4)
 [node name="coin3" parent="." instance=ExtResource("4_ljes3")]
 position = Vector2(671, -57)
 scale = Vector2(0.4, 0.4)
+
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

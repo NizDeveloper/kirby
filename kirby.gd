@@ -68,3 +68,8 @@ func moneda():
 		coin3.position.y = -1000
 		puntuacion += 1
 		puntuacion_label.text = str(puntuacion)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene()
+	pass # Replace with function body.
