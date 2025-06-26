@@ -1,5 +1,5 @@
 extends Area2D
-enum TipoPlataforma {FIJA, OSCILATORIA, FRAGIL, REBOTE}
+enum TipoPlataforma {FIJA, OSCILATORIA, FRAGIL, REBOTE, PARPADEANTE}
 @export var tipo: TipoPlataforma = TipoPlataforma.FIJA;
 @export var fuerza_rebote := 2.0
 
@@ -19,6 +19,9 @@ func actualizar_plataforma():
 			$Sprite2D.modulate = Color.RED
 		TipoPlataforma.REBOTE:
 			$Sprite2D.modulate = Color.YELLOW
+		TipoPlataforma.PARPADEANTE:
+			$Sprite2D.modulate = Color.MAGENTA
+			parpadear()
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jugador"):
@@ -32,21 +35,26 @@ func _on_body_entered(body: Node2D) -> void:
 					body.puede_rebotar(fuerza_rebote)
 				else:
 					body.velocity.y = body.brinco * fuerza_rebote
-			pass # Replace with function body.
+			pass
 	
 func oscilar():
 		var tween = create_tween()
 		tween.tween_property(self,"position:x",position.x + 100,2)
 		tween.tween_property(self,"position:x",position.x - 100,2)
 		tween.set_loops()
+func parpadear():
+	while true:
+		await get_tree().create_timer(2).timeout
+		$Sprite2D.visible = false
+		$StaticBody2D/CollisionShape2D.disabled = true
+		await get_tree().create_timer(2).timeout
+		$Sprite2D.visible = true
+		$StaticBody2D/CollisionShape2D.disabled = false
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	get_tree().reload_current_scene()
 	pass # Replace with function body.
-
-
-
 
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
