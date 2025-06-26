@@ -2268,10 +2268,10 @@ size = Vector2(63.625, 79)
 size = Vector2(128, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjkqw"]
-size = Vector2(1134.5, 157)
+size = Vector2(1005, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svbbj"]
-size = Vector2(15.25, 27.5)
+size = Vector2(39, 28)
 
 [node name="Node2D" type="Node2D"]
 
@@ -2346,19 +2346,6 @@ position = Vector2(880, 45)
 scale = Vector2(0.4, 0.4)
 tipo = 3
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(597, 161.5)
-shape = SubResource("RectangleShape2D_xjkqw")
-debug_color = Color(0.701407, 0.404332, 0.726738, 0.42)
-
-[node name="Area2D2" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(1128.62, -13.25)
-shape = SubResource("RectangleShape2D_svbbj")
-
 [node name="coin" parent="." instance=ExtResource("4_ljes3")]
 position = Vector2(237, 5)
 scale = Vector2(0.4, 0.4)
@@ -2371,4 +2358,17 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(671, -57)
 scale = Vector2(0.4, 0.4)
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(618, 109)
+shape = SubResource("RectangleShape2D_xjkqw")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1130, -18)
+shape = SubResource("RectangleShape2D_svbbj")
+
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_2_body_entered"]
