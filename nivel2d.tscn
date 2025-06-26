@@ -1,8 +1,9 @@
 [gd_scene load_steps=15 format=4 uid="uid://don8ve037x72a"]
 
+[ext_resource type="PackedScene" uid="uid://dgqu1kr71148u" path="res://kirby.tscn" id="2_63g17"]
 [ext_resource type="Texture2D" uid="uid://dken4f8066rpr" path="res://assets/map/Game Boy Advance - Kirby Nightmare in Dream Land - Vegetable Valley Level 1.png" id="2_gmoul"]
-[ext_resource type="Texture2D" uid="uid://6sc03nf7428l" path="res://assets/character/kirby-sprites.png" id="3_6kcor"]
-[ext_resource type="Script" uid="uid://lydmjckv7vdx" path="res://character_body_2d.gd" id="3_gmoul"]
+[ext_resource type="Texture2D" uid="uid://ge8fy0uhfhxl" path="res://assets/map/coin.png" id="3_gmoul"]
+[ext_resource type="PackedScene" uid="uid://cklrshcqk2ofm" path="res://coin.tscn" id="4_ljes3"]
 [ext_resource type="PackedScene" uid="uid://6uftnbb43p75" path="res://plataforma.tscn" id="4_xnsf1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k277h"]
@@ -2252,29 +2253,25 @@ texture = ExtResource("2_gmoul")
 sources/0 = SubResource("TileSetAtlasSource_k277h")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k277h"]
-size = Vector2(193.5, 20)
+size = Vector2(191, 76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljes3"]
-size = Vector2(65, 20)
+size = Vector2(65, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmoul"]
-size = Vector2(102, 20)
+size = Vector2(112, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kcor"]
-size = Vector2(56.5, 20)
+size = Vector2(63.625, 79)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnsf1"]
-size = Vector2(126, 20)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k277h"]
-radius = 7.0
-height = 16.0
+size = Vector2(128, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjkqw"]
-size = Vector2(1134.5, 174)
+size = Vector2(1134.5, 157)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svbbj"]
-size = Vector2(41, 29)
+size = Vector2(15.25, 27.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -2286,28 +2283,28 @@ tile_set = SubResource("TileSet_5ane6")
 position = Vector2(9, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(85.25, 16)
+position = Vector2(86.5, 41)
 shape = SubResource("RectangleShape2D_k277h")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(311.5, 10)
+position = Vector2(311.5, 40)
 shape = SubResource("RectangleShape2D_ljes3")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(735, 7)
+position = Vector2(735, 38.5)
 shape = SubResource("RectangleShape2D_gmoul")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(918, 11)
+position = Vector2(918.812, 40.5)
 shape = SubResource("RectangleShape2D_6kcor")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMapLayer/StaticBody2D"]
-position = Vector2(1078, 10)
+position = Vector2(1079, 40)
 shape = SubResource("RectangleShape2D_xnsf1")
 
-[node name="CharacterBody2Dr" type="CharacterBody2D" parent="."]
-position = Vector2(2, 19)
-script = ExtResource("3_gmoul")
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_63g17")]
+position = Vector2(44, -13)
+scale = Vector2(0.3, 0.3)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2Dr"]
 position = Vector2(577, 84)
@@ -2324,35 +2321,44 @@ position = Vector2(23, -22)
 shape = SubResource("CapsuleShape2D_k277h")
 
 [node name="plataforma" parent="." instance=ExtResource("4_xnsf1")]
-position = Vector2(317, -40)
+position = Vector2(281, 23)
+scale = Vector2(0.5, 0.5)
+tipo = 4
 
 [node name="plataforma2" parent="." instance=ExtResource("4_xnsf1")]
-position = Vector2(643, -61)
+position = Vector2(560, 1)
 tipo = 1
 
 [node name="plataforma3" parent="." instance=ExtResource("4_xnsf1")]
-position = Vector2(449, -105)
+position = Vector2(653, -42)
 tipo = 2
 
 [node name="plataforma4" parent="." instance=ExtResource("4_xnsf1")]
-position = Vector2(933, -38)
+position = Vector2(880, 45)
+scale = Vector2(0.4, 0.4)
 tipo = 3
-
-[node name="plataforma5" parent="." instance=ExtResource("4_xnsf1")]
-position = Vector2(1076, -53)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(578.75, 216)
+position = Vector2(597, 161.5)
 shape = SubResource("RectangleShape2D_xjkqw")
 debug_color = Color(0.701407, 0.404332, 0.726738, 0.42)
 
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(1127, -15)
+position = Vector2(1128.62, -13.25)
 shape = SubResource("RectangleShape2D_svbbj")
 
-[connection signal="body_entered" from="Area2D" to="CharacterBody2Dr" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="CharacterBody2Dr" method="_on_area_2d_2_body_entered"]
+[node name="coin" parent="." instance=ExtResource("4_ljes3")]
+position = Vector2(237, 5)
+scale = Vector2(0.4, 0.4)
+
+[node name="coin2" parent="." instance=ExtResource("4_ljes3")]
+position = Vector2(928, -14)
+scale = Vector2(0.4, 0.4)
+
+[node name="coin3" parent="." instance=ExtResource("4_ljes3")]
+position = Vector2(671, -57)
+scale = Vector2(0.4, 0.4)
