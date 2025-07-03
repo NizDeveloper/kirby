@@ -2,7 +2,7 @@
 
  ***Integrantes***
  - maximo santiago romero 
- - Gadiel niz mariscal peña
+ - Níz Gadiel Peña Mariscal
    
 ***Descripción breve del juego y sus mecánicas*** 
 
