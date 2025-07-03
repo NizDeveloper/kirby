@@ -1,3 +1,5 @@
-## **Nombre del juego**: Kirby
+## ***Nombre del juego***: Kirby
 
- ## **Integrantes** 
+ ## ***Integrantes*** 
+ maximo santiago romero 
+ 
