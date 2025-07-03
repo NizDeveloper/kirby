@@ -1,3 +1,3 @@
-# Kirby
+## **Nombre del juego**: Kirby
 
  ## **Integrantes** 
