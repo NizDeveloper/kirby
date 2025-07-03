@@ -1,3 +1,3 @@
 # Kirby
 
-** Integrantes **
+ # Integrantes 
