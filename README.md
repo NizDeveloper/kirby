@@ -1,25 +1,34 @@
-## ***Nombre del juego***: Kirby
+# Kirby
 
- ***Integrantes***
- - maximo santiago romero 
+ ## Integrantes
  - Níz Gadiel Peña Mariscal
+ - Maximo Santiago Romero 
    
-***Descripción breve del juego y sus mecánicas*** 
+## Mecanicas
+Es un juego de aventura en las plataformas es un juego 2D clásico de plataformas donde controlas a Kirby, quien debe saltar entre plataformas, recolectar monedas y llegar a la meta para avanzar al siguiente nivel.
 
-es un juego donde tienes que pasar diferentes obstaculos 
+## Recursos Usados
+Todos los assets fueron descargados de <a href="https://www.spriters-resource.com/game_boy_advance/kirbynim/" target="_blank">Spriters Resource</a>
+Sprites de Kirby, Fondo para los niveles y el diseño del mapa.
 
-con mayor dificultades para pasar el nivel en el que te encuentras 
+## Escenas
+  - Nivel 1:
+    lorem
+    
+  - Nivel 2:
+    lorem
+## Códigos
 
-ayudandote con las plataformas y en el camino rrecoger las monedas
+## Dificultades usando GitHub
+### Níz
+Yo ya sabía el uso de git y github, el problema que tuve fue el coordinar y "enseñar" a usar git a mi compañero.
 
-que estan en diferentes partes de el partes de el mapa las plataformas tienen diferentes propiedades 
+### Maximo
+Tuve problemas en:
+- modifican el mismo archivo línea de código, y al intentar fusionar ramas
+- Al hacer push, puedes subir cambios que eliminan los de otro compañero si no hiciste pull antes
+y las cosecuensias fue que algunas vezes se perdio trabajo, y es difícil recuperarlo si no hay respaldos
+y algunas veze se debia resolver el conflicto manualmente, lo que puede ser difícil.
 
-como (oscilar, rebote, frail y fija), cada una de estas te ayudara para poder cruzar en el nivel en el que te encuentres 
-
-y al final del camino pordras encontrar una puerta la cual te llevara al siguiente nivel 
-
-***Descripción de los recursos usados a manera de lista (incluir sonidos, assets y efectos)***
-
-
-
- 
+## Conclusión
+En la programación es muy importante usar las herramientas colaborativas para el trabajo en equipo, ambos pudimos trabajar en diferentes partes del juego y tuvimos que combinar nuestros códigos a través de Git para hacerlo funcionar, tuvimos algunos conflictos de código pero juntos tuvimos que organizarnos y hablar para resolverlos.
